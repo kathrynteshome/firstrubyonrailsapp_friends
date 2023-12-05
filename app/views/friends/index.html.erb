@@ -1,0 +1,27 @@
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Twitter</th>
+        <th> </th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @friends.each do |friend| %>
+        <tr>
+          <td>
+            <%= link_to friend.first_name + ' ' + friend.last_name, friend %>
+          </td>
+          <td><%= friend.email %></td>
+          <td><%= friend.phone %></td>
+          <td><%= friend.twitter %></td>
+          <td><%= link_to 'Delete', friend %></td>
+          
+        </tr>
+        </tr>
+        <%end%>
+    </tbody>
+  </table>
